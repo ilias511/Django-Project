@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block page %}
+<h1>Delete Recipe</h1>
+<div class="items-container">
+    <div class="item">
+        <form action="{% url 'delete recipe' get.id %}" method="post">
+            {{ recipe_delete }}
+            {% csrf_token %}
+            <input type="submit" value="Delete">
+            </form>
+            <input type="submit" class="button edit" value="Edit">
+
+    </div>
+</div>
+
+{% endblock %}
